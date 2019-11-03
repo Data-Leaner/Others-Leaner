@@ -23,9 +23,14 @@ git config --local --list
 git config --system --list
 
 # 查看单一参数
-git config --global --list user.name
-git config --local --list user.name
-git config --system --list user.name
+git config --global user.name
+git config --local user.name
+git config --system user.name
+
+# 删除某个配置
+git config --global --unset user.name
+git config --local --unset user.name
+git config --system --unset user.name
 ```
 
 
