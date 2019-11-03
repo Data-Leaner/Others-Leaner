@@ -15,6 +15,20 @@ git config --system user.name 'ray'
 git config --system user.email 'xxxxx@xxx.com'
 ```
 
+### 查看参数
+```bash
+# 查看所有
+git config --global --list
+git config --local --list
+git config --system --list
+
+# 查看单一参数
+git config --global --list user.name
+git config --local --list user.name
+git config --system --list user.name
+```
+
+
 ### 初始化命令
 ```bash
 # 进入仓库目录
