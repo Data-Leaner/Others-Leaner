@@ -51,3 +51,8 @@ git add .
 ```bash
 git commit -m'注释信息'
 ```
+
+### 查看commit日志
+```bash
+git log
+```
