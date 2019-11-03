@@ -1,5 +1,20 @@
 ## Git 命令清单
 
+### 设置参数
+```bash
+# 设置全局
+git config --global user.name 'ray'
+git config --global user.email 'xxxxx@xxx.com'
+
+# 设置当前库
+git config --local user.name 'ray'
+git config --local user.email 'xxxxx@xxx.com'
+
+# 设置系统级别
+git config --system user.name 'ray'
+git config --system user.email 'xxxxx@xxx.com'
+```
+
 ### 初始化命令
 ```bash
 # 进入仓库目录
