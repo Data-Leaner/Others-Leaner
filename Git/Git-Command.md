@@ -9,3 +9,11 @@ git init your_project_nm
 # 如果已经存在的项目
 git init
 ```
+
+### 添加暂存区
+```bash
+# 指定添加某一个文件到暂存区
+git add file_nm
+# 指定添加所有变更或者新增文件到暂存区
+git add .
+```
