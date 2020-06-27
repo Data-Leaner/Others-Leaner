@@ -2,34 +2,27 @@ package main
 
 import "fmt"
 
-func QuickSort(arr []int) []int {
-	if len(arr) <= 1 {
-		return arr
-	} else {
-		splitdata := arr[0]
-		// 比我小
-		low := make([]int, 0, 0)
-		// 比我大
-		high := make([]int, 0, 0)
-		// 与我一样大
-		mid := make([]int, 0, 0)
-		mid = append(mid, splitdata)
-		for i := 1; i < len(arr); i++ {
-			if arr[i] < splitdata {
-				low = append(low, arr[i])
-			} else if arr[i] > splitdata {
-				high = append(high, arr[i])
-			} else {
-				mid = append(mid, arr[i])
-			}
+func bin_search(arr []int, finddata int) int {
+	low := 0
+	high := len(arr) - 1
+	for low <= high {
+		mid := (low + high)/2
+		//fmt.Println(mid)
+		if arr[mid] > finddata {
+			high = mid - 1
+		} else if arr[mid] < finddata {
+			low = mid + 1
+		} else {
+			return mid
 		}
-		low, high = QuickSort(low), QuickSort(high)
-		myarr := append(append(mid, low...), high...)
-		return myarr
 	}
+	return -1
 }
 
 func main() {
-	arr := []int{4,19,111,237,6,5,10,11,223}
-	fmt.Println(QuickSort(arr))
+	arr := make([]int, 1024*1024, 1024 * 1024)
+	for i := 0; i < 1024*1024; i++ {
+		arr[i] = i + 1
+	}
+	fmt.Println(bin_search(arr, 10234))
 }
